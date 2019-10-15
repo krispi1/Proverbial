@@ -87,10 +87,6 @@ function realTimeSearch() {
   // grab user search input
   searchKey = search.value;
 
-  // For an unbiased comparison, we need to level the 
-  // playground by turning both the searchKey and each 
-  // verseFound below to capital letters temporarily 
-  let ucSearchKey = searchKey.toUpperCase();
   let versesFound = []; // to hold results per search 
 
   console.log(searchKey);
@@ -120,6 +116,10 @@ function realTimeSearch() {
 
   } // end switch
 
+  // For an unbiased comparison, we need to level the 
+  // playground by turning both the searchKey and each 
+  // verseFound below to capital letters temporarily 
+  let ucSearchKey = searchKey.toUpperCase();
   // Loop through the entire dataSet and filter out verses that do not contain ucSearchKey
   // Populate versesFound with verses that contain the search term (ucSearchKey)
   dataSet.filter(verse => {
@@ -141,7 +141,15 @@ function realTimeSearch() {
     versesFound.map(verse => {
       searchResults.innerHTML += `<li>${verse}</li>`;
     })
-  } else {
+  } 
+
+  // No verses containing the given search term were found
+  else if (searchKey.length >= 1 && versesFound.length === 0) {
+    searchResults.innerHTML = `No Verses Containing '"<span style="color: orangered;"><strong>  
+        ${searchKey}  </strong></span> "' Were Found!`;
+  }
+  
+  else {
     // Initialize searchResults div with Proverbs summary by default
     searchResults.innerHTML = "";
     for (let key in Proverbs[0].ProverbsSummary) {
