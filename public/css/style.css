@@ -22,6 +22,7 @@ body {
   border-color: aqua;
   text-align: center;
   outline: none;
+  border-top: 5px solid orangered;
 }
 
 #search:focus {
