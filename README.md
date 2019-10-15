@@ -1,10 +1,10 @@
 # Proverbial
 
-This application provides a search feature to scour through the Bible book of Proverbs.
+This application provides a search feature to skim through the Bible book of Proverbs.
 It's a convenient way to search a specific term and get instant results instead of
 reading through the entire Proverbs book to find what you are looking for.
 
-### JavaScript strategies used
+#### JavaScript strategies used
 
 1. JSON
 2. Multi-dimensional arrays
