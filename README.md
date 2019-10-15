@@ -1,10 +1,10 @@
 # Proverbial
 
 This application provides a search feature to skim through the Bible book of Proverbs.
-It's a convenient way to search a specific term and get instant results instead of
-reading through the entire Proverbs book to find what you are looking for.
 
-#### JavaScript strategies used
+It's a convenient way to search a specific term and get instant results instead of reading through the entire Proverbs book to find what you are looking for.
+
+#### Some techniques used
 
 1. JSON
 2. Multi-dimensional arrays
@@ -13,5 +13,6 @@ reading through the entire Proverbs book to find what you are looking for.
 5. Arrays: map, filter, indexOf
 6. Dynamic DOM rendering
 7. Implicit type coercion
-8. Local storage
+8. localStorage
 9. Conditionals: if/else, switch
+10. setTimeout, setInterval

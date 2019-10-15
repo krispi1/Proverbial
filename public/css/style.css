@@ -1,133 +1,131 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: wheat 
+  margin: 0px;
+  padding: 0px;
+  background-color: wheat;
 }
 
-/* .container {
-    margin: 70px 25% auto;
-    text-align: center;
-} */
+.page-header {
+  color: black;
+  font-weight: 800;
+  font-size: 1.8em;
+  text-shadow: 0.5px 1px 1px aqua;
+  margin-bottom: 80px;
+}
 
 #contentArea {
-    margin: 0px 0px auto;
+  margin: 0 auto;
 }
 
 #search {
-    border-radius: 7px;
-    padding: 0 5px;
-    border-color:aqua;
-    text-align: center;
-    outline: none;
+  border-radius: 7px;
+  padding: 0 5px;
+  border-color: aqua;
+  text-align: center;
+  outline: none;
 }
 
 #search:focus {
-    outline: none;
+  outline: none;
 }
 
-input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+input {
+  font-family: "FontAwesome";
+} /* This is for the placeholder */
 
-/* #search {
-    border-radius: 7px;
-    padding: 0 5px;
-    border-color:aqua;
-    text-align: center;
-}
- */
 #search:focus {
-    border-radius: 7px;
-    padding: 0 5px;
-    border-color:orangered;
+  border-radius: 7px;
+  padding: 0 5px;
+  border-color: orangered;
 }
 
 #searchResults {
-    text-align: justify;
+  text-align: justify;
 }
 
 /* https://www.lockedownseo.com/change-the-bullet-color-of-a-list-item-with-css/ */
 li {
-    /* set color of list item text */
-    /* color: rgb(0, 104, 165); */
-    list-style: none; 
+  /* set color of list item text */
+  /* color: rgb(0, 104, 165); */
+  list-style: none;
 }
 
 li::before {
-    /* color of bullet or square */
-    color: orangered;
+  /* color of bullet or square */
+  color: orangered;
 
-    /* Unicode of character to precede the list item */
-    content: "\2022"; 
-    
-    /* em or %*/
-    font-size: 1.2em; 
-    
-    /* use em*/
-    padding-right: 1.1225em; 
-    position: relative;
-    /* use em or % */
-    top: 0em; 
+  /* Unicode of character to precede the list item */
+  content: "\2022";
+
+  /* em or %*/
+  font-size: 1.2em;
+
+  /* use em*/
+  padding-right: 1.1225em;
+  position: relative;
+  /* use em or % */
+  top: 0em;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-    .container {
-        margin: 70px 3% auto;
-        text-align: center;
-    }
+@media (max-width: 575.98px) {
+  .container {
+    margin: 10px 3% auto;
+    text-align: center;
+  }
 
-    #contentArea {
-        margin: 0px 1% auto;
-    }
+  #contentArea {
+    margin: 0px 1% auto;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { 
-    .container {
-        margin: 70px 5% auto;
-        text-align: center;
-    }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    margin: 10px 5% auto;
+    text-align: center;
+  }
 
-    #contentArea {
-        margin: 0px 10% auto;
-    }
+  #contentArea {
+    margin: 0px 10% auto;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    .container {
-        margin: 70px 5% auto;
-        text-align: center;
-    }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    margin: 10px 5% auto;
+    text-align: center;
+  }
 
-    #contentArea {
-        margin: 0px 15% auto;
-    }
+  #contentArea {
+    margin: 0px 15% auto;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-    .container {
-        margin: 70px 5% auto;
-        text-align: center;
-    }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    margin: 10px 5% auto;
+    text-align: center;
+  }
 
-    #contentArea {
-        margin: 0px 20% auto;
-    }
+  #contentArea {
+    margin: 0px 20% auto;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    .container {
-        margin: 70px 5% auto;
-        text-align: center;
-    }
+@media (min-width: 1200px) {
+  .container {
+    margin: 10px 5% auto;
+    text-align: center;
+  }
 
-    #contentArea {
-        margin: 0px 20% auto;
-    }
-} 
+  #contentArea {
+    margin: 0px 20% auto;
+  }
+}
 
 .container {
-    margin-bottom: 30px
+  margin-bottom: 30px;
 }

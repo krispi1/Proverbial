@@ -32,7 +32,9 @@ for (let key in Proverbs[0].ProverbsSummary) {
 }
 
 // Watch out for keyboard input on the search bar
-search.addEventListener("keyup", realTimeSearch);
+// Delay invocation of realTimeSearch by 1 second to facilitate
+// ample time for reasonable input by the user
+search.addEventListener("keyup", () => setTimeout(realTimeSearch, 500));
 
 // construct an array out of the entire Proverbs book
 function structureData() {
@@ -65,36 +67,13 @@ function structureData() {
   }
 )()
 
-/* // ------------------------------
-var typingTimer; // timer identifier
-var doneTypingInterval = 1;  // time in ms, 5 second for example
-
-// on keyup, start the countdown
-search.addEventListener('keyup', function () {
-  clearTimeout(typingTimer);
-  typingTimer = setTimeout(realTimeSearch, doneTypingInterval);
-});
-
-// on keydown, clear the countdown 
-search.addEventListener('keydown', function () {
-  clearTimeout(typingTimer);
-});
-
-// user is "finished typing," do something
-// ------------------------------ */
-
 function realTimeSearch() {
-  // grab user search input
+  // grab a user's search input
   searchKey = search.value;
-
   let versesFound = []; // to hold results per search 
 
   console.log(searchKey);
   console.log(Boolean(searchKey));
-  /**
-   * **I am yet to figure out hou to optimize realTimeSearch()**
-   * **i.e. make it work faster (especially on slow devices)**
-   */
 
   // Clear previous div results 
   searchResults.innerHTML = '';
@@ -106,9 +85,33 @@ function realTimeSearch() {
       search.value = "God";
       searchKey = "God";
       break;
+    case "god ":
+      search.value = "God ";
+      searchKey = "God ";
+      break;
+    case " god":
+      search.value = " God";
+      searchKey = " God";
+      break;
+    case " god ":
+      search.value = " God ";
+      searchKey = " God ";
+      break;
     case "lord":
       search.value = "Lord";
       searchKey = "Lord";
+      break;
+    case "lord ":
+      search.value = "Lord ";
+      searchKey = "Lord ";
+      break;
+    case " lord":
+      search.value = " Lord";
+      searchKey = " Lord";
+      break;
+    case " lord ":
+      search.value = " Lord ";
+      searchKey = " Lord ";
       break;
     default:
       searchKey = searchKey;
@@ -130,7 +133,7 @@ function realTimeSearch() {
 
   // Set search results title whenever some search results actually exist
   if (searchKey.length >= 1 && versesFound.length > 0) {
-    searchResults.innerHTML = `Verses Found Containing '"<span style="color: orangered;"><strong>  
+    searchResults.innerHTML = `Verses Containing '"<span style="color: orangered;"><strong>  
         ${searchKey}  </strong></span> "' : 
         ${versesFound.length}</br></br>`;
     console.clear(); 
@@ -149,7 +152,7 @@ function realTimeSearch() {
         ${searchKey}  </strong></span> "' Were Found!`;
   }
   
-  else {
+  else if (searchKey.length === 0) {
     // Initialize searchResults div with Proverbs summary by default
     searchResults.innerHTML = "";
     for (let key in Proverbs[0].ProverbsSummary) {
@@ -169,13 +172,13 @@ function realTimeSearch() {
  */
 (
   function testPad() {
-    //console.log(Proverbs[2]); // yields entire chapter 2 object {2: Array(23)}
-    //console.log(Proverbs[2][''+2]); // yields entire chapter 2 array of objects
-    //console.log(Proverbs[2][''+2].length); // yields chapter 2 array's length: 23
+    // console.log(Proverbs[2]); // yields entire chapter 2 object {2: Array(23)}
+    // console.log(Proverbs[2][''+2]); // yields entire chapter 2 array of objects
+    // console.log(Proverbs[2][''+2].length); // yields chapter 2 array's length: 23
 
     for (var i = 1; i < Proverbs[2]['' + 2].length; i++) { // loop through chapter 2 array
-      //console.log(Proverbs[2][''+2][i]); // console log each [verse object] within chapter 2 array
-      //console.log(Proverbs[2][''+2][i][''+i]); // console log each [verse] within chapter 2 array
+      // console.log(Proverbs[2][''+2][i]); // console log each [verse object] within chapter 2 array
+      // console.log(Proverbs[2][''+2][i][''+i]); // console log each [verse] within chapter 2 array
     }
   }
 )(); // end testPad IIFE
